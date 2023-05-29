@@ -81,7 +81,6 @@ spec:
                 port:
                   number: 80
           
-          
           - path: "/logout"
             pathType: Prefix
             backend:
@@ -222,6 +221,94 @@ spec:
             backend:
               service:
                 name: svc-sm-bank-transaction
+                port:
+                  number: 80 
+          
+          - path: "/register"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-register
+                port:
+                  number: 80 
+          
+          - path: "/user-register-from-admin"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-register
+                port:
+                  number: 80 
+          
+          - path: "/user_register"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-register
+                port:
+                  number: 80
+          
+          - path: "/admin-register"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-register
+                port:
+                  number: 80 
+          
+          - path: "/admin_user_register"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-register
+                port:
+                  number: 80 
+          
+          - path: "/admin-register"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-register
+                port:
+                  number: 80 
+          
+          - path: "/forget-password"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-register
+                port:
+                  number: 80 
+          
+          - path: "/api/v1/send-reset-password-link"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-register
+                port:
+                  number: 80 
+          
+          - path: "/password-reset/*"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-register
+                port:
+                  number: 80 
+          
+          - path: "/api/v1/password-reset"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-register
+                port:
+                  number: 80 
+          
+          - path: "/account-verification/verify/*"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-register
                 port:
                   number: 80 
           
