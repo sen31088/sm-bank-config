@@ -306,7 +306,7 @@ spec:
                   number: 80 
           
           - path: "/account-verification/verify/.*"
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: svc-sm-bank-register
