@@ -345,7 +345,7 @@ spec:
                 port:
                   number: 80 
           
-           - path: "/add-user"
+          - path: "/add-user"
             pathType: Prefix
             backend:
               service:
