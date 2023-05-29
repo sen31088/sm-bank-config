@@ -1,0 +1,228 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ing-sm-bank
+  namespace: default
+  annotations:
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: "bank.testlab.com"
+      http:
+        paths:
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-home
+                port:
+                  number: 80
+          - path: "/home"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-home
+                port:
+                  number: 80
+          
+          - path: "/admin-home"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-home
+                port:
+                  number: 80
+          
+          - path: "/admin"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-home
+                port:
+                  number: 80
+
+          - path: "/login"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-auth
+                port:
+                  number: 80
+          
+          - path: "/admin-login"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-auth
+                port:
+                  number: 80
+          
+          - path: "/two-factor-authentication"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-auth
+                port:
+                  number: 80
+          
+          - path: "/resend-otp"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-auth
+                port:
+                  number: 80
+
+          - path: "/api/v1/verify/two-factor-authentication"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-auth
+                port:
+                  number: 80
+          
+          
+          - path: "/logout"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-auth
+                port:
+                  number: 80
+          
+          - path: "/admin-logout"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-auth
+                port:
+                  number: 80
+          
+          
+          - path: "/redis-status"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-home
+                port:
+                  number: 80
+          
+          - path: "/transfer"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-transfer
+                port:
+                  number: 80
+          - path: "/onetime-transfer"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-transfer
+                port:
+                  number: 80  
+
+          - path: "/add-beneficiary"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-transfer
+                port:
+                  number: 80 
+          
+          - path: "/api/v1/add-beneficiary"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-transfer
+                port:
+                  number: 80
+          - path: "/delete-beneficiary"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-transfer
+                port:
+                  number: 80  
+
+          - path: "/api/v1/delete-beneficiary"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-transfer
+                port:
+                  number: 80 
+          
+          - path: "/api/v1/onetimetransferfund"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-transfer
+                port:
+                  number: 80  
+
+          - path: "/api/v1/beneficiarytransferfund"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-transfer
+                port:
+                  number: 80 
+
+          - path: "/recent-transactions"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-transaction
+                port:
+                  number: 80 
+          
+          - path: "/detailed-transactions"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-transaction
+                port:
+                  number: 80 
+          
+          - path: "/api/v1/detailed-transactions"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-transaction
+                port:
+                  number: 80 
+          
+          - path: "/admin-recent-transactions"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-transaction
+                port:
+                  number: 80 
+            
+          - path: "/api/v1/admin-recent-transactions"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-transaction
+                port:
+                  number: 80 
+          
+          - path: "/api/v1/admin-detailed-transactions"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-transaction
+                port:
+                  number: 80 
+            
+          - path: "/admin-detailed-transactions"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-transaction
+                port:
+                  number: 80 
+          
+          
