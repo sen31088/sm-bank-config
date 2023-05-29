@@ -361,7 +361,7 @@ spec:
                 port:
                   number: 80 
           
-           - path: "/api/v1/suspend-user"
+          - path: "/api/v1/suspend-user"
             pathType: Prefix
             backend:
               service:
