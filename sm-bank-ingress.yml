@@ -4,7 +4,7 @@ metadata:
   name: ing-sm-bank
   namespace: default
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /account-verification/verify/$1/$2
+    nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   ingressClassName: nginx
   rules:
@@ -289,7 +289,7 @@ spec:
                 port:
                   number: 80 
           
-          - path: "/password-reset/(.*)"
+          - path: "/password-reset/.*"
             pathType: Prefix
             backend:
               service:
@@ -305,7 +305,7 @@ spec:
                 port:
                   number: 80 
           
-          - path: "/account-verification/verify/([^/]+)/([^/]+)"
+          - path: "/account-verification/verify/.*"
             pathType: ImplementationSpecific
             backend:
               service:
