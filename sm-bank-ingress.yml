@@ -313,4 +313,76 @@ spec:
                 port:
                   number: 80 
           
+          - path: "/pending-users"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-users
+                port:
+                  number: 80 
+          
+          - path: "/api/v1/approve-users"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-users
+                port:
+                  number: 80 
+          
+          - path: "/user-details"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-users
+                port:
+                  number: 80 
+          
+          - path: "/api/v1/get-user-details"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-users
+                port:
+                  number: 80 
+          
+           - path: "/add-user"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-users
+                port:
+                  number: 80 
+          
+          - path: "/suspend-user"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-users
+                port:
+                  number: 80 
+          
+           - path: "/api/v1/suspend-user"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-users
+                port:
+                  number: 80 
+          
+          - path: "/delete-user"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-users
+                port:
+                  number: 80 
+          
+          - path: "/api/v1/delete-user"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-users
+                port:
+                  number: 80 
+          
           
