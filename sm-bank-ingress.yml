@@ -385,4 +385,13 @@ spec:
                 port:
                   number: 80 
           
+          - path: "/cards"
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-sm-bank-cards
+                port:
+                  number: 80 
+          
+          
           
